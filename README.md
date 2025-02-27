@@ -2,6 +2,7 @@
 A code repo for practice
 
 **#JavaScript Execution context**
+
 i) Global Execution Context is allocate in THIS keyword
 ii) Function Execution Context
 iii) Eval Execution Context used in Mongoos  (global)
@@ -28,3 +29,6 @@ i.e val1 = 10; val2 = 5; addNum = **[new var env. + execution thread]**
     execution context~ num1 = 10; num2 = 5; total = 15
 
     
+**CALL STACK**
+1) _Global Execution_ is mandatory.
+2) functions will come and remove after execution. If there are more than one functions than the last function exit after execution. Call Stack performs LIFO method.
