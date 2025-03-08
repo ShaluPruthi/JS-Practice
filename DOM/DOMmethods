@@ -1,0 +1,59 @@
+<!-- target an element -->
+document.getElementById('title') 
+<!--        <h1 id="title" class="heading">DOM learning
+            <span style="display: none;">text text</span>
+        </h1>  
+-->
+
+
+document.getElementById('title').id <!-- title -->
+document.getElementById('title').className  <!-- heading -->
+document.getElementById('title').getAttribute('id')/('class')
+document.getElementById('title').setAttribute('heading','test heading')
+<!--        <h1 id="title" class="test heading">DOM learning
+            <span style="display: none;">text text</span>
+        </h1>  
+-->
+const title = document.getElementById('title')
+
+<!-- styling to an element -->
+title.style.backgroundColor='red'
+
+
+<!-- fetch content -->
+title.textContent : display all values  <!-- DOM learning text text -->
+title.innerHTML : display values along with the html tags
+<!-- DOM learning <span style="display: none;">text text</span> -->
+title.innerText : only visible values<!-- DOM learning -->
+
+
+<!-- QUERY selector -->
+document.querySelector('h1')   <!-- return first h1 value -->
+document.querySelector('#title')    
+<!--        <h1 id="title" class="heading">DOM learning
+    <span style="display: none;">text text</span> </h1>  
+-->
+document.querySelector('input[type:'password']')
+
+const myUl = document.querySelector('ul')
+myUl.querySelector('li')
+​<li>​"one"</li>
+
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+            0: li
+            1: li
+            2: li 
+            length: 3
+            [[Prototype]]
+
+const tempLi=document.querySelectorAll('li')
+
+tempLi
+NodeList(3) [li, li, li]
+
+tempLi[0].style.color="red" <!-- convert the 0 value color into red  -->
+
+<!-- forEach -->
+tempLi.forEach(function (li) {li.style.backgroundColor = "skyblue"} )
