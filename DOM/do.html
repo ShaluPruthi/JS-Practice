@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMt</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    const pa = document.querySelector('.parent')
+    console.log(pa)
+    console.log(pa.children)    //HTMLCollection
+    console.log(pa.children[1].innerHTML)
+
+    for (let i = 0; i < pa.children.length; i++) {
+        console.log(pa.children[i].innerHTML)
+        
+    }
+    pa.children[1].style.color="orange"
+    console.log(pa.firstElementChild)   //Monday
+    console.log(pa.lastElementChild);   //Thursday
+    
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)   //Monday
+    console.log(dayOne.parentElement)
+    console.log(dayOne.nextElementSibling)  //Tuesday
+
+    console.log("NODES: ", pa.childNodes)   //NodeList[9] 0:text; 1:div.day; 2:text; 3:div.day; 4:text; 5:div.day; 6:text; 7:div.day; 8:text; length:9
+    
+</script>
+</html>

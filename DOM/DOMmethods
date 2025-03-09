@@ -57,3 +57,28 @@ tempLi[0].style.color="red" <!-- convert the 0 value color into red  -->
 
 <!-- forEach -->
 tempLi.forEach(function (li) {li.style.backgroundColor = "skyblue"} )
+
+
+use forEach with NodeList but if you want to apply map(), filter() than convert it into array
+Array.from(tempLi)
+
+
+<!-- HTMLCollection -->
+document.getElementsByClassName('list-item')
+HTMLCollection(4)[li.list-item, li.list-item, li.list-item, li.list-item]
+
+
+const tempCl = document.getElementByClassName('list-item')
+
+<!-- to convert them into array -->
+Array.from(tempCl)
+(4)[li.list-item, li.list-item, li.list-item, li.list-item]
+
+const myConvertedArray = Array.from(tempCl)
+myConvertedArray
+
+(4)[li.list-item, li.list-item, li.list-item, li.list-item]
+
+myConvertedArray.forEach(function (li){
+    li.style.color="orange"
+})
