@@ -10,5 +10,19 @@
 <script>
     const div = document.createElement('div')
     console.log(div);
+    div.className = "main"
+    div.id= Math.round(Math.random() * 10 + 1)  //4 inside bracket(10.038205199725768)
+    div.setAttribute("title", "generate title") //directly set the value
+    div.style.color = "orange"
+    div.style.backgroundColor = "blue"
+    div.style.padding = "15px"
+    // div.innerText = "HELLO WORLD"   //override the values(leke aaega value fir change krega)
+    //innerText and createTextNode work similar
+    const addText = document.createTextNode("HELLO WORLD")
+    div.appendChild(addText)
+
+    //display on webpage
+    document.body.appendChild(div)
+
 </script>
 </html>

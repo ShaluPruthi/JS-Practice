@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color:#212121; color:#fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    // these three functions work similarly
+
+    function addLanguage(name){
+        //CREATE ELEMENT
+        const list= document.createElement('li');
+        list.innerHTML = `${name}`
+        document.querySelector('.language').appendChild(list)
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")
+
+    //choose appendChild instead innerHTML
+    function addOpti(Lname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(Lname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOpti('Golang')
+    // OR we can do
+    function addoptiLang(Lname){
+        const li = document.createElement('li')
+        const addText = document.createTextNode(Lname)
+        li.appendChild(addText)
+    }
+
+
+    //EDIT
+    const scndLang= document.querySelector('li:nth-child(2)')   //select 2nd appendChild
+    console.log(scndLang)
+    //scndLang.innerHTML= "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    //replace the content
+    scndLang.replaceWith(newli)
+
+    //EDIT
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Typescript</li>'
+    
+    //PRACTICE ~
+    // const thirdLang = document.querySelector('li:nth-child(3)')
+    // const change = thirdLang.innerHTML = "Ruby"
+    
+    // const ne = document.createElement('li')
+    // ne.textContent = "Bootstrap"
+    // thirdLang.replaceWith(ne)
+
+
+    //REMOVE
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
